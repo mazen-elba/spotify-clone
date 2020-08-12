@@ -25,7 +25,7 @@ function App() {
         token: _token,
       });
 
-      s.getPlaylist("if43ul5xh5wn0a76dac39swvi").then((response) =>
+      s.getPlaylist("37i9dQZEVXcJLwIR9y375F").then((response) =>
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
@@ -47,14 +47,14 @@ function App() {
       s.getMe().then((user) => {
         dispatch({
           type: "SET_USER",
-          user,
+          user: user,
         });
       });
 
       s.getUserPlaylists().then((playlists) => {
         dispatch({
           type: "SET_PLAYLISTS",
-          playlists,
+          playlists: playlists,
         });
       });
     }
